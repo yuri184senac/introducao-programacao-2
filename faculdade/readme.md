@@ -1,2 +1,2 @@
 
-![UML](https://imgur.com/aNiFIqJ)
+![UML](https://i.imgur.com/aNiFIqJ.png)
