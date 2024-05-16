@@ -1,17 +1,26 @@
 package faculdade;
 
-public abstract class Pessoa {
+public abstract class PessoaDTO {
 	
 	private String nome;
 	private String cpf;
-	private String matrícula;
+	private String matricula;
 	private String telefone;
 	private String email;
 	private String endereco;
 	
-	public abstract void cadastrar();
+	public PessoaDTO(String nome, String cpf, String matricula, String telefone, String email, String endereco) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.matricula = matricula;
+		this.telefone = telefone;
+		this.email = email;
+		this.endereco = endereco;
+		
+	}
+		
 	public abstract void editar();
-	public abstract void excluir();
+
 	
 	public String getNome() {
 		return nome;
@@ -30,11 +39,11 @@ public abstract class Pessoa {
 	}
 	
 	public String getMatrícula() {
-		return matrícula;
+		return matricula;
 	}
 	
-	public void setMatrícula(String matrícula) {
-		this.matrícula = matrícula;
+	public void setMatrícula(String matricula) {
+		this.matricula = matricula;
 	}
 	
 	public String getTelefone() {
@@ -60,6 +69,8 @@ public abstract class Pessoa {
 	public void setEndereço(String endereco) {
 		this.endereco = endereco;
 	}
+
+	
 	
 	
 }
