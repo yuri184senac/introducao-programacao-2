@@ -3,10 +3,11 @@ package classModel;
 import java.util.List;
 
 public class Disciplina {
-	private String nome;
-	private String nomeProfessor;
-	private String nomeAluno;
-	private List<Double> notas;
+	protected String nome;
+	protected String nomeProfessor;
+	protected String nomeAluno;
+	protected List<Double> notas;
+	protected int frequencia;
 	
 	public Disciplina(String nome, String nomeProfessor, String nomeAluno) {
 		this.nome = nome;
@@ -42,6 +43,15 @@ public class Disciplina {
 		this.nomeAluno = nomeAluno;
 	}
 	
+	public int getFrequencia() {
+		return frequencia;
+	}
+
+	public void setFrequencia(int frequencia) {
+		this.frequencia = frequencia;
+	}
+
+	
 	public boolean adicionarNota(Double nota) {
 		try {
 			notas.add(nota);
@@ -51,6 +61,9 @@ public class Disciplina {
 			return false;
 		}
 	}
+	
+	
 
+	
 
 }

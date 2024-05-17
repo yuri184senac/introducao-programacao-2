@@ -3,9 +3,9 @@ package classModel;
 import java.util.Random;
 
 public class Boleto {
-	 private Integer numero;
-	 private double valor;
-	 private String beneficiario;
+	protected Integer numero;
+	protected double valor;
+	protected String beneficiario;
 	 	
 	
  public Integer getNumero() {

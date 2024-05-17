@@ -6,10 +6,10 @@ import classModel.Boleto;
 import classModel.Disciplina;
 import classModel.Historico;
 
-public class AlunoDTO extends PessoaDTO {
-	private List<Disciplina> disciplinas;
-	private Boleto boleto;
-	private Historico historico;
+public abstract class AlunoDTO extends PessoaDTO {
+	protected List<Disciplina> disciplinas;
+	protected Boleto boleto;
+	protected Historico historico;
 	
 	public AlunoDTO (
 				String nome,
@@ -28,18 +28,9 @@ public class AlunoDTO extends PessoaDTO {
 		return boleto;
 	}
 	
-	public Historico solicitarHistorico() {
-		historico.setNomeAluno(getNome());		
-		for (int i = 1; i <= disciplinas.size(); i++) {
-			Disciplina ojb = this.disciplinas.get(i);
-			historico.setDisciplinas(ojb);
-		}		
-		return  historico;
-	}
+	public abstract Historico solicitarHistorico();
 	
-	public void inscreverDisciplina(Disciplina obj) {
-		disciplinas.add(obj);
-	}
+	public abstract Disciplina inscreverDisciplina();
 
 	@Override
 	public void editar() {
